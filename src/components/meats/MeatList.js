@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 // Step 1: MeatList gets called by its parent
-export const MeatList = () => {
+export const MeatList = ({chosenMeat, setChosenMeat}) => {
     // Step 2: We define our component's state (with an intial value of [])
     // and we get a function for changing that state by calling useState()
     const [meats, setMeats] = useState([]);
@@ -27,11 +27,12 @@ export const MeatList = () => {
                         return (
                             <label htmlFor={`meat--${meat.id}`} key={meat.id}>
                                 <input
+                                checked={meat.id === chosenMeat ? true : false}
                                 type="radio"
                                 id={`meat--${meat.id}`}
                                 onChange={
                                     () => {
-
+                                        setChosenMeat(meat.id)
                                     }
                                 }
 

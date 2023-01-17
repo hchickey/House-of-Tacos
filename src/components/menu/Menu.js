@@ -1,6 +1,10 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { MeatList } from "../meats/MeatList"
+import { SaucesList } from "../sauces/SaucesList"
+import { ToppingsList } from "../toppings/ToppingsList"
 import { TortillaList } from "../tortillas/TortillaList"
+import { OrderButton } from "./OrderButton"
 
 
 
@@ -125,7 +129,13 @@ export const Menu = () => {
             <h1 className="menuHead">Our Menu. Build the Perfect Taco for You!</h1>
             <section className="menu">
                 <TortillaList selectedTortilla={selectedTortilla} setSelectedTortilla={setSelectedTortilla} />
-                
+                <MeatList chosenMeat={chosenMeat} setChosenMeat={setChosenMeat} />
+                <ToppingsList selectedToppings={selectedToppings} selectOrderTopping={selectOrderTopping} />
+                <SaucesList selectedSauces={selectedSauces} selectOrderSauce={selectOrderSauce} />
+
+            </section>
+            <section className="button-section">
+                <OrderButton submitOrder={submitOrder} />
             </section>
         </>
     )
