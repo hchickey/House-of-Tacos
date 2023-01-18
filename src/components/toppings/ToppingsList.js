@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 
 
-export const ToppingsList = () => {
+export const ToppingsList = ({selectOrderTopping, selectedToppings}) => {
     const [toppings, setToppings] = useState([])
     //return an array with an initial state value and a function for changing that state
 
@@ -13,6 +13,18 @@ export const ToppingsList = () => {
     }, [])
 
     return (
-        
+        <div className="menu--list toppings">
+            <h2>Toppings</h2>
+            <div className="toppings--item">
+                {toppings.map( topping =>
+                    <label htmlFor={`topping--${topping.id}`} key={topping.id}>
+                    <input type="checkbox" id={`topping--${topping.id}`}
+                    onChange={() => selectOrderTopping(topping.id)}
+                    checked={selectedToppings.includes(topping.id) ? true : false} />
+                    {topping.topping}
+                    </label>
+                    )}
+            </div>
+        </div>
     )
 }
