@@ -5,7 +5,7 @@ import { SaucesList } from "../sauces/SaucesList"
 import { ToppingsList } from "../toppings/ToppingsList"
 import { TortillaList } from "../tortillas/TortillaList"
 import { OrderButton } from "./OrderButton"
-
+import "./Menu.css"
 
 
 export const Menu = () => {

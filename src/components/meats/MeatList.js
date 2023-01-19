@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import "./Meats.css"
 
 // Step 1: MeatList gets called by its parent
 export const MeatList = ({chosenMeat, setChosenMeat}) => {

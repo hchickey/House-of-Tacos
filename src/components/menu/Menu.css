@@ -1,0 +1,20 @@
+.menuHead {
+    text-align: center;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .menu,
+  .button-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5em;
+  }
+  
+  .menu--list {
+    background-color: lightgreen;
+    padding: 1em;
+    border-radius: 5px;
+  }

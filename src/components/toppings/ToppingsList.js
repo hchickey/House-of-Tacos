@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-
+import "./Toppings.css"
 
 export const ToppingsList = ({selectOrderTopping, selectedToppings}) => {
     const [toppings, setToppings] = useState([])

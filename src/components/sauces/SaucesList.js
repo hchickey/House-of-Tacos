@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-
+import "./Sauces.css"
 
 export const SaucesList = ({selectOrderSauce, selectedSauces}) => {
     const [sauces, setSauces] = useState([])

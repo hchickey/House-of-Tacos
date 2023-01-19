@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useEffect } from "react"
+import "./Orders.css"
 
 export const Order = ({order, deleteOrder}) => {
     const [orderToppings, setOrderToppings] = useState([])

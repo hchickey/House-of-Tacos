@@ -1,0 +1,4 @@
+.sauces--items {
+    display: flex;
+    flex-direction: column;
+  }
